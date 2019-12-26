@@ -6,8 +6,8 @@ class NotificationsController < ApplicationController
 
     def notify
         @client = Twilio::REST::Client.new(
-            Remindererapi::Application.credentials.twilio_account_sid,
-            Remindererapi::Application.credentials.twilio_auth_token
+            Rails.application.credentials.twilio_account_sid,
+            Rails.application.credentials.twilio_auth_token
         )
         message = @client.messages.create(
             from: '+14152134974', 
