@@ -7,7 +7,7 @@ class TwilioController < ApplicationController
       response = Twilio::TwiML::VoiceResponse.new do |r|
         r.say message: "Hello! This is anami!, thanks for calling", voice: "alice"
         # r.Sms "Well done building your first Twilio on Rails 5 app!"
-        r.play loop: 2, url: "http://linode.rabasa.com/cantina.mp3"
+        # r.play loop: 2, url: "http://linode.rabasa.com/cantina.mp3"
       end
       render :xml => response.to_xml
     end
