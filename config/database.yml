@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: mydb
+  database: remindererapi_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: remindererapi_production
-  username: remindererapi
-  password: <%= ENV['REMINDERERAPI_DATABASE_PASSWORD'] %>
+  username: 
+  password: 
