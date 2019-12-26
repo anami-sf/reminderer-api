@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   post 'twilio/voice' => 'twilio#voice'
+  post 'notifications/notify' => 'notifications#notify'
 
 end
