@@ -5,9 +5,9 @@ class TwilioController < ApplicationController
 
     def voice
       response = Twilio::TwiML::VoiceResponse.new do |r|
-        r.say "Yay! You're on Rails!", voice: "alice"
+        r.say message: "Yay! You're on Rails!", voice: "alice"
         # r.Sms "Well done building your first Twilio on Rails 5 app!"
-        r.play "http://linode.rabasa.com/cantina.mp3"
+        # r.play "http://linode.rabasa.com/cantina.mp3"
       end
       render :xml => response.to_xml
     end
