@@ -10,7 +10,7 @@ class NotificationsController < ApplicationController
             Rails.application.credentials.twilio_auth_token
         )
 
-        @message = @client.messages.create(
+        @client.messages.create(
             from: '+14152134974', 
             to: '+14153351196', 
             body: 'Sending this message from my new twilio app. If you got it, please reply. - your gf',
