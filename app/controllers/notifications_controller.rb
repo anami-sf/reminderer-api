@@ -23,7 +23,8 @@ class NotificationsController < ApplicationController
         )
         
         #puts message.sid
-        render plain: message.status
+        #render plain: message.status
+        render :xml => response.to_xml
     end
   
 end
