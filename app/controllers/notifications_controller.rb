@@ -8,6 +8,11 @@ class NotificationsController < ApplicationController
         Rails.application.credentials.twilio_account_sid,
         Rails.application.credentials.twilio_auth_token
         )
+
+        Twilio.configure do |config|
+            config.account_sid = Rails.application.credentials.twilio_account_sid
+            config.auth_token = Rails.application.credentials.twilio_auth_token
+        end
         
     @message = @client.messages.create(
     from: '+14152134974',
