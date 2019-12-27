@@ -17,9 +17,9 @@ class NotificationsController < ApplicationController
             #media_url: 'http://linode.rabasa.com/yoda.gif'
         )
         
-        #puts message.sid
+        #puts @message.sid
         #render plain: message.status
-        render :xml => @message.to_xml
+        #render :xml => @message.to_xml
     end
   
 end
