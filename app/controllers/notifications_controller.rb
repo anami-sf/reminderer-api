@@ -2,7 +2,7 @@ require 'twilio-ruby'
 
 class NotificationsController < ApplicationController
 
-    #skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token
 
     @client = Twilio::REST::Client.new(
         Rails.application.credentials.twilio_account_sid,
